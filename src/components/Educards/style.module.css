@@ -1,0 +1,131 @@
+/* Container for all cards */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(5, 5, 54);
+    padding: 40px 60px 40px 60px;
+}
+
+/* Main section containing the cards */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between cards */
+    justify-content: center;
+    margin-top: 50px;
+}
+.heading1{
+    color: whitesmoke;
+    font-size: 4rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: bold;
+
+}
+
+/* Style for each card */
+.cardcontainer {
+    flex-basis: calc(50% - 20px); /* Ensures two cards in one row with some gap */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(228, 225, 225, 0.1);
+    text-align: left;
+    cursor: pointer;
+    background-color: rgba(240, 25, 222, 0.3);
+    position: relative; /* To allow for border animation */
+    overflow: hidden; /* To ensure border stays within the card */
+    animation: borderAnimation 2s infinite linear; /* Faster animation (2s) */
+}
+
+/* 5-Color Animation for card border on all sides */
+@keyframes borderAnimation {
+    0% {
+        border-top: 4px solid #3347ff; /* Blue color on top */
+        border-right: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 3px solid transparent;
+    }
+    25% {
+        border-top: 4px solid transparent;
+        border-right: 4px solid #bb058e; /* Pink color on right */
+        border-bottom: 4px solid transparent;
+        border-left: 3px solid transparent;
+    }
+    50% {
+        border-top: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 4px solid #2c0253; /* Purple color on bottom */
+        border-left: 3px solid transparent;
+    }
+    75% {
+        border-top: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 3px solid #b6db2e; /* Magenta color on left */
+    }
+    100% {
+        border-top: 3px solid #f1e5f1; /* Yellow color on top */
+        border-right: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 3px solid transparent;
+    }
+}
+
+/* Style for image inside the card */
+.cardImage {
+    width: 100px; /* Adjust image size */
+    height: 100px;
+    object-fit: cover; /* Ensure image is not distorted */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Heading styling */
+.cardcontainer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+/* Paragraph text styling */
+.cardcontainer p {
+    font-size: 1rem;
+    color: #faf4f4;
+}
+
+/* Media Queries */
+
+/* Extra small devices (mobile phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .cardcontainer {
+        flex-basis:100%; /* Full-width cards on small screens */
+        padding: 70px;
+    }
+    .heading1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+        margin-top: 40px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cardcontainer {
+        flex-basis: calc(50% - 20px); /* Two cards per row */
+    }
+    .heading1 {
+        font-size: 3rem; /* Medium font size for tablets */
+        margin-top: 40px;
+    }
+}
+
+/* Large screens: Two cards per row by default */
+@media only screen and (min-width: 1024px) {
+    .cardcontainer {
+        flex-basis: calc(50% - 20px); /* Two cards per row */
+    }
+    .heading1 {
+        font-size: 4rem; /* Keep the large font size on large screens */
+    }
+}

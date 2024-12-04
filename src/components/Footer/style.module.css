@@ -1,0 +1,19 @@
+.footer {
+    width: 100%; /* Full width for all devices */
+    min-height: 200px; /* Minimum height */
+    background-color: rgb(5, 5, 54); /* Background color */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Vertical padding */
+    font-size: 18px; /* Text size */
+    color: #f3ebeb; /* Text color */
+    margin-top: auto; /* Push footer to bottom */
+    font-weight: bolder; /* Bold text */
+    align-items: center; /* Align items centrally */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    background-image: url('/bg.png'); /* Background image */
+    background-size: contain; /* Adjust background size */
+    background-position: left; /* Position background image */
+    background-repeat: no-repeat; /* Do not repeat background */
+    border-top: 2px solid whitesmoke; /* Top border */
+}

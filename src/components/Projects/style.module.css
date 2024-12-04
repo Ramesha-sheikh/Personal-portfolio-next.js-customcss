@@ -1,0 +1,155 @@
+/* Container for all cards */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(5, 5, 54);
+    min-height: 100vh;
+    background-image: url('/cd.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px 0px 90px 0px;
+}
+
+/* Fixed content section */
+.content {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    /* padding: 10% 0px 0px 0px; */
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.content p {
+    font-size: medium;
+    color: whitesmoke;
+}
+
+/* Main section containing the cards */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Picture styling */
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.picture img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Properly fit the image */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for better visuals */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.picture img:hover {
+    transform: scale(1.05); /* Zoom on hover */
+}
+
+/* Style for each card */
+.cardcontainer {
+    flex-basis: 28%;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+    background-color: rgba(240, 150, 232, 0.5); /* Adjusted transparency */
+   
+}
+
+/* Hover effect for the card */
+.cardcontainer:hover {
+    transform: translateY(-10px);
+}
+
+/* Heading styling */
+.cardcontainer h1 {
+    width: 60%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: whitesmoke;
+    font-family: monospace;
+    background: linear-gradient(45deg, #250ea5, #d82ea5,#070861); /* Gradient background */
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth effects */
+}
+
+/* Hover effect for gradient */
+.cardcontainer h1:hover {
+    background: linear-gradient(45deg, #2c0131, #ee7dcc,#2c0131); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+/* Paragraph text styling */
+.cardcontainer p {
+    font-size: 3rem;
+    color: #f7f5f5;
+    cursor: pointer;
+   font-weight: bolder;
+}
+
+/* Media Queries */
+
+/* Extra small devices (mobile phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .cardcontainer {
+        flex-basis: 100%; /* Full-width cards on extra-small screens */
+        padding: 20px;
+    }
+
+    .picture img {
+        width: 100%; /* Ensure it scales correctly */
+        height: auto;
+    }
+}
+
+/* Small devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .cardcontainer {
+        flex-basis: 100%; /* Full-width cards on small tablets */
+        padding: 30px;
+    }
+
+    .picture img {
+        width: 100%; /* Maintain proportions */
+        height: auto;
+    }
+}
+
+/* Medium devices (larger tablets or small laptops, 768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cardcontainer {
+        flex-basis: 40%; /* Three cards per row on medium screens */
+        padding: 35px;
+    }
+
+    .picture img {
+        width: 100%; /* No stretching */
+        height: auto;
+    }
+}
+
+/* Large screens: No change (keeps the original styles) */

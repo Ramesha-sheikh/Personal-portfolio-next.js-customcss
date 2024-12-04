@@ -1,0 +1,209 @@
+.main {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: rgb(5, 5, 54);
+  padding: 0 90px;
+  position: relative;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: cursive;
+  font-weight: bold;
+  animation: slideDown 1.2s ease-in-out;
+}
+
+.contactinfo {
+  padding: 10px 10px 10px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.section1,
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(240, 150, 232, 0.3);
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+  border: 3px solid transparent;
+  background: rgba(255, 255, 255, 0.1);
+  /* Initial box-shadow */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  animation: cornerGlow 4s infinite alternate; /* Animation for corners */
+}
+
+/* Animation for light effect on corners */
+@keyframes cornerGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 1), /* Red in top-left */
+                0 0 10px rgba(0, 255, 0, 1), /* Green in top-right */
+                0 0 10px rgba(0, 0, 255, 1), /* Blue in bottom-left */
+                0 0 10px rgb(218, 9, 190); /* Yellow in bottom-right */
+  }
+  25% {
+    box-shadow: 0 0 15px rgb(33, 96, 138), /* Orange in top-left */
+                0 0 15px rgba(75, 0, 130, 1), /* Indigo in top-right */
+                0 0 15px rgba(238, 130, 238, 1), /* Violet in bottom-left */
+                0 0 15px rgba(34, 193, 195, 1); /* Aqua in bottom-right */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 105, 180, 1), /* Hot Pink in top-left */
+                0 0 20px rgba(0, 255, 255, 1), /* Cyan in top-right */
+                0 0 20px rgb(202, 39, 134), /* Magenta in bottom-left */
+                0 0 20px rgb(243, 125, 223); /* Golden Yellow in bottom-right */
+  }
+  75% {
+    box-shadow: 0 0 10px rgba(238, 206, 227, 0.5), /* White in all corners */
+                0 0 10px rgba(179, 24, 145, 0.1), /* Light shadow */
+                0 0 5px rgba(240, 134, 175, 0.5); /* Subtle dark shadow */
+  }
+  100% {
+    box-shadow: 0 0 10px rgb(231, 21, 137), /* Red in top-left */
+                0 0 10px rgba(0, 255, 0, 1), /* Green in top-right */
+                0 0 10px rgba(0, 0, 255, 1), /* Blue in bottom-left */
+                0 0 10px rgb(209, 77, 226); /* Yellow in bottom-right */
+  }
+}
+
+/* Social icons and form styles */
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: #2455dd;
+  transition: transform 0.3s ease, fill 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.icon:hover {
+  fill: #007bff;
+  transform: scale(1.2);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0rem;
+  min-height: 50px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.textarea {
+  resize: none;
+  min-height: 150px;
+  outline: none;
+}
+
+.button {
+  width: 200px;
+  padding: 0.8rem;
+  background: linear-gradient(45deg, #f17bce, #3c19b9, #810f7c);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .section1,
+  .section2 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    gap: 1rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .section1,
+  .section2 {
+    padding: 15px;
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

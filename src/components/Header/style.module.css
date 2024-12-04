@@ -1,0 +1,164 @@
+/* Basic styling for the navbar */
+.nav {
+    width: 80%;
+    background-color: rgba(240, 25, 222, 0.3);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 90px;
+    position: fixed;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1000;
+    border-bottom: 2px solid whitesmoke;
+  }
+  
+  /* Adjust logo container */
+  .pic {
+    display: flex;
+    width: 8%;
+    height: 50px;
+    gap: 10px;
+  }
+  
+  /* Desktop Menu */
+  .desktopMenu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .desktopMenu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .button {
+    background: linear-gradient(90deg, #0b2bb9, #e494c4,#0c29aa);
+    color: white;
+    padding: 8px 26px;
+    border-radius: 5px;
+    
+    border: none;
+    cursor: pointer;
+    display: none; /* Hide the button by default */
+    font-weight: bold;
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Add a hover effect for the button */
+.button:hover {
+    background: linear-gradient(90deg, #7e09c2, #b4bad1,#5f0b97);
+    border: 2px solid whitesmoke;
+}
+
+  
+  /* Hamburger menu icon */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Mobile menu styling */
+  .mobileMenu {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(240, 25, 222, 0.3);
+    border-radius: 30px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 999;
+  }
+  
+  .mobileMenu.show {
+    display: flex !important; /* Show menu when 'show' class is added */
+  }
+  
+  .mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Small screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    .nav {
+      width: 90%;
+      background-color: rgba(240, 25, 222, 0.3);
+      color: #FFFFFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     padding: 5px 20px 5px 20px;
+      position: fixed;
+      border-radius: 50px;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 1000;
+      border-bottom: 2px solid whitesmoke;
+    }
+    .pic {
+        display: flex;
+        width: 5%;
+        height: 50px;
+        gap: 10px;
+      }
+    /* Desktop Menu */
+    .desktopMenu {
+      display: none; /* Hide desktop menu on mobile */
+    }
+  
+    /* Hamburger icon */
+    .hamburger {
+      display: block; /* Show hamburger icon */
+    }
+  
+    /* Show mobile menu when toggled */
+    .mobileMenu.show {
+      display: flex !important;
+    }
+  
+    /* Show the 'Download Now' button in the mobile menu */
+    .mobileMenu button {
+      display: block;
+      margin-top: 20px; /* Optional margin to space it out */
+    }
+  
+    /* Button styles for mobile */
+    .button {
+      display: none; /* Hide the button outside of mobile menu */
+    }
+  }
+  
+  /* Medium and Large screens (min-width: 769px) */
+  @media (min-width: 769px) {
+    .button {
+      display: block; /* Show the button on larger screens */
+    }
+  
+    .mobileMenu {
+      display: none; /* Hide mobile menu */
+    }
+  
+    .hamburger {
+      display: none; /* Hide hamburger icon on larger screens */
+    }
+  }
+  
